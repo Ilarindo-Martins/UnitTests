@@ -12,6 +12,7 @@ import org.junit.rules.ExpectedException;
 import br.ce.wcaquino.entidades.Filme;
 import br.ce.wcaquino.entidades.Locacao;
 import br.ce.wcaquino.entidades.Usuario;
+import br.ce.wcaquino.exceptions.FilmeSemEstoqueException;
 import br.ce.wcaquino.utils.DataUtils;
 
 
@@ -41,7 +42,7 @@ public class LocacaoServiceTest {
 	
 	}
 	
-	@Test(expected=Exception.class)
+	@Test(expected=FilmeSemEstoqueException.class)
 	public void testLocacao_filmeSemEstoque() throws Exception {
 		//Cenario
 		LocacaoService	service = new LocacaoService();
@@ -53,7 +54,7 @@ public class LocacaoServiceTest {
 							
 	}
 	
-	@Test
+	//@Test
 	public void testLocacao_filmeSemEstoque__2() {
 		//Cenario
 		LocacaoService	service = new LocacaoService();
@@ -71,7 +72,7 @@ public class LocacaoServiceTest {
 	}
 	
 	
-	@Test
+	//@Test
 	public void testLocacao_filmeSemEstoque_3() throws Exception {
 		//Cenario
 		LocacaoService	service = new LocacaoService();
@@ -84,7 +85,7 @@ public class LocacaoServiceTest {
 		//Acao
 		service.alugarFilme(usuario,filme);
 		
-		//teste2					
+							
 	}
 	
 }
