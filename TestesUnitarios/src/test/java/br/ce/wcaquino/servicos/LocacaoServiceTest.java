@@ -84,7 +84,7 @@ public class LocacaoServiceTest {
 		//Acao
 		service.alugarFilme(usuario,filme);
 		
-							
+		//teste					
 	}
 	
 }
